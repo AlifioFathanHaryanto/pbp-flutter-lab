@@ -42,7 +42,7 @@ const dan final sama sama bisa kita gunakan untuk menginisiasi variabel yang imm
 5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
 - Pertama, saya membuat fungsi _decrementCounter yang akan melakukan decrement pada variabel _counter, untuk _incrementCounter sudah tersedia dari template awal aplikasi Flutter.
 - Kedua, saya membuat floating action button, yang terdiri atas tombol increment (+) dan tombol decrement (-). Dalam mengimplementasikan floating action button untuk decrement, saya menggunakan widget visibility untuk memberikan pembatasan kemunculan, dimana tombol decrement hanya akan muncul saat value dari _counter lebih besar dari 0.
-- Ketiga, saya membuat if else pada widget build untuk mengiidentifikasi apakah angka pada _counter adalah genap atau ganjil. Lalu, return menggunakan widget Text. Saat _counter dimodulo dengan 2 hasilnya bukan 0, maka akan maka akan menampilkan "GANJIL" dan akan menggunakan widget TextStyle untuk memberi warna biru pada teks "GANJIL". Jika tidak masuk ke if condition, maka akan masuk ke else condition dan akan menggunakan widget Text untuk menampilkan "GENAP" dan widget TextStyle untuk memberi warna Merah pada teks "GENAP".
+- Ketiga, saya membuat if else pada widget build untuk mengiidentifikasi apakah angka pada _counter adalah genap atau ganjil. Lalu, return menggunakan widget Text. Saat _counter dimodulo dengan 2 hasilnya bukan 0, maka akan menggunakan widget Text untuk menampilkan "GANJIL" dan menggunakan widget TextStyle untuk memberi warna biru pada teks "GANJIL". Jika tidak masuk ke if condition, maka akan masuk ke else condition dan akan menggunakan widget Text untuk menampilkan "GENAP" dan menggunakan widget TextStyle untuk memberi warna merah pada teks "GENAP".
 
 
 
