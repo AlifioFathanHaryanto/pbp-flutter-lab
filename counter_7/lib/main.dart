@@ -49,7 +49,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String temp = "GANJIL";
   int _counter = 0;
 
   void _decrementCounter() {
@@ -60,11 +59,6 @@ class _MyHomePageState extends State<MyHomePage> {
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
       _counter--;
-      if (_counter % 2 != 0) {
-        temp = "GANJIL";
-      } else {
-        temp = 'GENAP';
-      }
     });
   }
 
@@ -76,11 +70,6 @@ class _MyHomePageState extends State<MyHomePage> {
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
       _counter++;
-      if (_counter % 2 != 0) {
-        temp = "GANJIL";
-      } else {
-        temp = 'GENAP';
-      }
     });
   }
 
@@ -118,10 +107,11 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              temp,
-              style: (temp == "GANJIL") ? TextStyle(color: Colors.blue) : TextStyle(color: Colors.red),
-            ),
+            if (_counter % 2 != 0) ...[
+              const Text('GANJIL', style: TextStyle(color: Colors.blue)),
+            ] else ...[
+              const Text('GENAP', style: TextStyle(color: Colors.red)),
+            ],
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
