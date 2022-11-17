@@ -72,7 +72,7 @@ class _FormPageState extends State<FormPage> {
                   padding: const EdgeInsets.all(7.5),
                   child: TextFormField(
                     decoration: InputDecoration(
-                      hintText: "Judul",
+                      labelText: "Judul",
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(3.5),
                       ),
@@ -86,6 +86,12 @@ class _FormPageState extends State<FormPage> {
                       setState(() {
                         _titleItem = value!;
                       });
+                    },
+                    validator: (String? value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Isi Judul!';
+                      }
+                      return null;
                     },
                   ),
                 ),
@@ -175,7 +181,7 @@ class _FormPageState extends State<FormPage> {
                                       onPressed: () {
                                         Navigator.pop(context);
                                       },
-                                      child: Text('Kembali'),
+                                      child: Text('Close'),
                                     ),
                                   ],
                                 ),
