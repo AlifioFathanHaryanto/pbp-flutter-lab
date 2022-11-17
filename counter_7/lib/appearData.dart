@@ -68,13 +68,13 @@ class _DataPageState extends State<DataPage> {
               children: [
                 for (var data in arrData)
                   Padding(
-                    padding: const EdgeInsets.all(3.0),
+                    padding: const EdgeInsets.all(3.5),
                     child: Container(
                       child: ListTile(
                         tileColor: Color.fromARGB(255, 255, 255, 255),
                         shape: RoundedRectangleBorder(
                           side: BorderSide(width: 0.2),
-                          borderRadius: BorderRadius.circular(3),
+                          borderRadius: BorderRadius.circular(2),
                         ),
                         title: Text(data.pilihJenis.toString(),
                             style: TextStyle(fontSize: 22)),
