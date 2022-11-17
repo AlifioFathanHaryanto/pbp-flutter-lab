@@ -15,6 +15,36 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
+README TUGAS 8 PBP
+1. Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement!
+- Navigator.push berfungsi untuk melakukan penambahan rute ke halaman selanjutnya (baru) yang akan muncul di atas tumpukan tampilan layar sebelumnya.
+- Navigator.pushReplacement berfungsi untuk melakukan penambahan rute tampilan ke halaman selanjutnya. Namun, saat halaman selanjutnya muncul, halaman sebelumnya akan dihapus karena tampilan layar digantikan dengan halaman yang baru.
+
+2. Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+- Widget Text, untuk menampilkan segala text pada halaman, seperti text "Form".
+- Widget Column, untuk melakukan pengaturan tata letak jarak vertikal pada elemen-elemen yang ingin diatur letaknya di halaman form.
+- Widget DropdownButton, berfungsi untuk membuat beberapa pilihan input, misal pada pilih jenis di halaman form.
+- Widget Scaffold, untuk menggunakan parameter AppBar, Drawer, dll.
+- Widget Padding, menambah jarak di antara container dan widget.
+- Widget Row, untuk melakukan pengaturan tata letak jarak secara horizontal pada elemen-elemen yang ingin diatur letak tampilannya pada halaman counter_7.
+
+3. Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed).
+- onChanged()
+- onSaved()
+- onHover()
+- onTap()
+- onPresent()
+
+4. Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
+Navigator bereperan penting dalam perpindahan layar, widget navigator akan melakukan pengaturan pergantian layar/halaman dengan logic yang sudah diberikan oleh programmer. Cara kerja navigator dapat diibaratkan seperti stack yang melakukan penyimpanan page. Saat user melakukan event yang menyebabkan terbukanya page baru, page baru tersebut akan masuk ke stack yang kemudian menimpa previous page. 
+
+5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+- Melakukan penambahan drawer/hamburger dengan widget drawer dengan 3 pilihan dan akan diarahkan menuju page Counter_7, Tambah Budget, atau Data Budget.
+- Membuat file form.dart untuk membuat form agar user dapat memasukkan input judul, nominal, dan pilih jenis. Pada file ini, diimplementasikan TextFormField serta Dropdown. Kemudian, diinisiasi pula variabel _nominalItem, _titleItem, dan _pilihJenis.
+- Membuat file appearData.dart untuk melakukan penampilan data apa saja yang telah diinput user pada form.
+
+
+
 README Tugas 7 PBP
 
 Nama   : Alifio Fathan Haryanto
