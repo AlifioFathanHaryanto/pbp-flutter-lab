@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:counter_7/main.dart';
 import 'package:counter_7/page/appearData.dart';
 import 'package:counter_7/page/form.dart';
@@ -8,15 +7,15 @@ import 'package:counter_7/page/myWatchList.dart';
 import 'package:intl/intl.dart';
 
 class DetailPage extends StatefulWidget {
-  const DetailPage({Key? key, required this.myWatchListModel}) : super(key: key);
-  final WatchList myWatchListModel;
+  const DetailPage({super.key, required this.myWatchListModel});
+  final Mywatchlist myWatchListModel;
 
   @override
   State<DetailPage> createState() => _DetailPageState(myWatchListModel);
 }
 
 class _DetailPageState extends State<DetailPage> {
-  WatchList modelMyWatchList;
+  Mywatchlist modelMyWatchList;
   _DetailPageState(this.modelMyWatchList);
   @override
   Widget build(BuildContext context) {
@@ -24,7 +23,7 @@ class _DetailPageState extends State<DetailPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Data Budget'),
-      ), // Menambahkan drawer menu
+      ),
       body: Column(
         children: [
           Padding(
@@ -34,7 +33,7 @@ class _DetailPageState extends State<DetailPage> {
                 modelMyWatchList.fields.title,
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 26,
+                  fontSize: 28,
                 ),
               ),
             ),
@@ -46,39 +45,39 @@ class _DetailPageState extends State<DetailPage> {
               children: [
                 const Text(
                   "Release Date: ",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
                 Text(
                   DateFormat.yMMMd().format(modelMyWatchList.fields.releaseDate),
-                  style: const TextStyle(fontSize: 14),
+                  style: const TextStyle(fontSize: 16),
                 ),
               ],
             ),
           ),
           Padding(
             padding: const EdgeInsets.only(
-                top: 4, left: 8, right: 8, bottom: 4),
+                top: 3, left: 7, right: 7, bottom: 3),
             child: Row(
               children: [
                 const Text(
                   "Rating: ",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
                 Text(
                   '${modelMyWatchList.fields.rating} / 5',
-                  style: const TextStyle(fontSize: 14),
+                  style: const TextStyle(fontSize: 16),
                 ),
               ],
             ),
           ),
           Padding(
             padding: const EdgeInsets.only(
-    top: 4, left: 8, right: 8, bottom: 4),
+    top: 3, left: 7, right: 7, bottom: 3),
             child: Row(
               children: [
                 const Text(
                   "Status: ",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
                 Text(
                   modelMyWatchList.fields.watched.toString().split('.').last.toLowerCase(),
@@ -89,23 +88,22 @@ class _DetailPageState extends State<DetailPage> {
           ),
           Padding(
             padding: const EdgeInsets.only(
-                top: 4, left: 8, right: 8, bottom: 4),
+                top: 3, left: 7, right: 7, bottom: 3),
             child: Row(
               children: [
                 const Text(
                   "Review: ",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
                 Flexible(
                   child: Text(
                     modelMyWatchList.fields.review,
-                    style: const TextStyle(fontSize: 14),
+                    style: const TextStyle(fontSize: 16),
                   ),
                 ),
               ],
             ),
           ),
-          //const Flexible(fit: FlexFit.tight, child: SizedBox()),
           Padding(
             padding: const EdgeInsets.fromLTRB(10,360,10,10),
             child: TextButton(
@@ -118,12 +116,11 @@ class _DetailPageState extends State<DetailPage> {
                   context,
                   MaterialPageRoute(
                       builder: (context) => const MyWatchListPage()),
-                
                 );
               },
               child: const Text(
                 "Kembali",
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: Color.fromARGB(255, 243, 242, 242)),
               ),
             ),
           ),

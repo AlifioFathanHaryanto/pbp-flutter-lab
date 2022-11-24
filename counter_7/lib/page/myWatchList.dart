@@ -18,7 +18,7 @@ class _MyWatchListState extends State<MyWatchListPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Watch List'),
+          title: const Text('My Watch List'),
         ),
         drawer: Drawer(
           child: Column(
@@ -37,7 +37,6 @@ class _MyWatchListState extends State<MyWatchListPage> {
               ListTile(
                 title: const Text('Tambah Budget'),
                 onTap: () {
-                  // Route menu ke halaman form
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(builder: (context) => const FormPage()),
@@ -66,7 +65,7 @@ class _MyWatchListState extends State<MyWatchListPage> {
           ),
         ),
         body: FutureBuilder(
-            future: WatchList.fetchWatchList(),
+            future: Mywatchlist.fetchWatchList(),
             builder: (context, AsyncSnapshot snapshot) {
               if (snapshot.data == null) {
                 return const Center(child: CircularProgressIndicator());
@@ -75,9 +74,9 @@ class _MyWatchListState extends State<MyWatchListPage> {
                   return Column(
                     children: const [
                       Text(
-                        "Tidak ada to do list :(",
+                        "Tidak ada to do list",
                         style:
-                            TextStyle(color: Color(0xff59A5D8), fontSize: 20),
+                            TextStyle(color: Color.fromARGB(255, 85, 164, 218), fontSize: 22),
                       ),
                       SizedBox(height: 8),
                     ],
