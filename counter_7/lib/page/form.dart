@@ -1,6 +1,7 @@
 import 'package:counter_7/main.dart';
 import 'package:flutter/material.dart';
-import 'package:counter_7/appearData.dart';
+import 'package:counter_7/page/appearData.dart';
+import 'package:counter_7/page/myWatchList.dart';
 
 List<MyData> arrData = [];
 
@@ -54,7 +55,18 @@ class _FormPageState extends State<FormPage> {
                 // Route menu ke halaman form
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => const DataPage()),
+                  MaterialPageRoute(
+                    builder: (context) => const DataPage()),
+                );
+              },
+            ),
+            ListTile(
+              title: const Text("My Watch List"),
+              onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const MyWatchListPage()),
                 );
               },
             ),

@@ -1,5 +1,6 @@
-import 'package:counter_7/form.dart';
+import 'package:counter_7/page/form.dart';
 import 'package:counter_7/main.dart';
+import 'package:counter_7/page/myWatchList.dart';
 import 'package:flutter/material.dart';
 
 class DataPage extends StatefulWidget {
@@ -52,8 +53,19 @@ class _DataPageState extends State<DataPage> {
             ListTile(
               title: const Text("Data Budget"),
               onTap: () {
-                Navigator.pop(
+                Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(builder: (context) => const DataPage()),
+                        );
+              },
+            ),
+            ListTile(
+              title: const Text("My Watch List"),
+              onTap: () {
+                Navigator.pushReplacement(
                   context,
+                  MaterialPageRoute(
+                      builder: (context) => const MyWatchListPage()),
                 );
               },
             ),

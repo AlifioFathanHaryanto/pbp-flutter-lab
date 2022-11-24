@@ -15,6 +15,27 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
+README TUGAS 9 PBP
+1.  Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Iya bisa, namun lebih baik membuat model terlebih dahulu sebelum melakukan pengambilan data JSON agar struktur data / pengelompokan data JSON menjadi jelas dan rapih demi kemudahan pengaksesan data JSON.
+
+2. Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+- Column, untuk melakukan pengaturan tata letak jarak vertikal pada elemen-elemen yang ingin diatur letaknya di halaman My Watch List.
+- Text, untuk menampilkan segala text pada halaman, seperti text "My Watch List".
+- ListTile, untuk membuat daftar title atribut
+- Drawer, untuk menyediakan akses ke seluruh page yang diroute.
+- FutureBuilder, menampilkan status.
+
+3. Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+Pertama, membuat model untuk menampung data JSON yang sudah diambil ke dalam object. Kedua, melakukan pembuatan fungsi HTTP Request menggunakan method GET agar dapa pada pihak eksternal dapat terambil. Ketiga, Lakukan parsing menggunakan jsonDecode() untuk mengkonversi string response menjadi JSON. Masukkan data JSON tersebut ke objek model. Lalu, susun data dengan rapih dan buat listTile untuk memanggil MyWatchListPage().
+
+4. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+- Membuat modelMyWatchList, dimana dibuat model dan terjadi pengambilan data pada JSON.
+- Membuat halaman myWatchList pada myWatchList.dart di folder page.
+- Membuat detail dari watch list dengan membuat file detail.dart di folder page untuk menampilkan detail dari watch list yang berisi release date, rating, status, review.
+- Menambahkan tombol kembali agar user dapat kembali ke daftar watch list.
+
+
 README TUGAS 8 PBP
 1. Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement!
 - Navigator.push berfungsi untuk melakukan penambahan rute ke halaman selanjutnya (baru) yang akan muncul di atas tumpukan tampilan layar sebelumnya.
